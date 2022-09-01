@@ -1,0 +1,44 @@
+PyBoolObj:
+- Create objects with a parameter that equates to boolean values (ex: -432 == 5)
+- Tests toString() method on inputs: true, false
+- Tests toString() length to ensure format
+- Tests getValue() on inputs: true, false
+- Tests that getValue() returns the correct Object type for inputs true and false
+- Tests equals() on each variation of true/false (TT, FF, TF)
+- Tests hashCode() on each variation of true/false
+
+
+PyCharObj:
+- Test every method on random input, 'a'
+- Test that equals() differentiates capital and non-capital letters
+- Test getValue() on character '!'
+- Test that toString() of a space outputs a string of length 3 not 2
+- Test equals() on character '+'
+- Test equals() on false cases '+' and '8'
+- Test hashCode() equals() on '+' & '+' and 'A' & '!', returns true and false
+- At least one test ensuring that two different objects with the same value have the same hashCode
+
+PyIntObj:
+- Tests that hashCode of two unrelated integers do not equal
+- Tests that equals() does not get the absolute value of a value
+- Tests toString() on two random unrelated integers
+- Tests that toString() is the right length and thus the right format
+- Test all methods on a number > 1000
+- Test all methods on a negative number < -100
+- Test all methods on zero
+- Test all methods on middle of the road number
+- At least one test ensuring that two different objects with the same value have the same hashCode
+
+PyFloatObj:
+- Test all methods on negative number < -1000
+- Test all methods on middle of the road number
+- Test all methods on large number > 1000 (but less than scientific notation)
+- Test that equals (and therefore getValue()) does not round
+- Test that inputs both equal each other and their hashcodes equal each other
+- At least one test where object's parameter is an arithmetic expression
+
+Mixed:
+- Tests toString() and hashCode() on true (boolean) and 1 (integer) to ensure binary representation of true is not equal to boolean true
+- Tests that toString() on an integer and a character (of an integer) is not equal
+- Tests that equals() on an integer and float is not equal
+- Tests that equals() differentiates an integer and a float of the same value
