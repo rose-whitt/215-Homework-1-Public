@@ -1,0 +1,190 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > PyCharObjTest</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">test.rice.obj</a>
+</div>
+
+<h1>Coverage Summary for Class: PyCharObjTest (test.rice.obj)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">PyCharObjTest</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (13/13)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (20/20)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package test.rice.obj;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import main.rice.obj.APyObj;
+<i class="no-highlight">4</i>&nbsp;import org.junit.jupiter.api.Tag;
+<i class="no-highlight">5</i>&nbsp;import org.junit.jupiter.api.Test;
+<i class="no-highlight">6</i>&nbsp;import main.rice.obj.PyCharObj;
+<i class="no-highlight">7</i>&nbsp;
+<i class="no-highlight">8</i>&nbsp;import static org.junit.jupiter.api.Assertions.*;
+<i class="no-highlight">9</i>&nbsp;
+<b class="fc"><i class="no-highlight">10</i>&nbsp;public class PyCharObjTest {</b>
+<b class="fc"><i class="no-highlight">11</i>&nbsp;    private static PyCharObj charA = new PyCharObj(&#39;a&#39;);</b>
+<b class="fc"><i class="no-highlight">12</i>&nbsp;    private static PyCharObj charADup = new PyCharObj(&#39;a&#39;);</b>
+<b class="fc"><i class="no-highlight">13</i>&nbsp;    private static PyCharObj charACapital = new PyCharObj(&#39;A&#39;);</b>
+<i class="no-highlight">14</i>&nbsp;
+<b class="fc"><i class="no-highlight">15</i>&nbsp;    private static PyCharObj charExclam = new PyCharObj(&#39;!&#39;);</b>
+<b class="fc"><i class="no-highlight">16</i>&nbsp;    private static PyCharObj charSpace = new PyCharObj(&#39; &#39;);</b>
+<b class="fc"><i class="no-highlight">17</i>&nbsp;    private static PyCharObj charPlus = new PyCharObj(&#39;+&#39;);</b>
+<b class="fc"><i class="no-highlight">18</i>&nbsp;    private static PyCharObj charPlusDup = new PyCharObj(&#39;+&#39;);</b>
+<b class="fc"><i class="no-highlight">19</i>&nbsp;    private static PyCharObj char8 = new PyCharObj(&#39;8&#39;);</b>
+<i class="no-highlight">20</i>&nbsp;
+<i class="no-highlight">21</i>&nbsp;// CHAR LENGTH CAN ONLY BE ONE
+<i class="no-highlight">22</i>&nbsp;
+<i class="no-highlight">23</i>&nbsp;
+<i class="no-highlight">24</i>&nbsp;    // a tests
+<i class="no-highlight">25</i>&nbsp;    @Test
+<i class="no-highlight">26</i>&nbsp;    void getValueA() {
+<b class="fc"><i class="no-highlight">27</i>&nbsp;        assertEquals(&#39;a&#39;, charA.getValue());</b>
+<i class="no-highlight">28</i>&nbsp;
+<i class="no-highlight">29</i>&nbsp;    }
+<i class="no-highlight">30</i>&nbsp;    @Test
+<i class="no-highlight">31</i>&nbsp;    void toStringA() {
+<i class="no-highlight">32</i>&nbsp;//        String actual = charA.toString();
+<b class="fc"><i class="no-highlight">33</i>&nbsp;        assertEquals(&quot;&#39;a&#39;&quot;, charA.toString());</b>
+<i class="no-highlight">34</i>&nbsp;    }
+<i class="no-highlight">35</i>&nbsp;
+<i class="no-highlight">36</i>&nbsp;    @Test
+<i class="no-highlight">37</i>&nbsp;    void equalsADup() {
+<b class="fc"><i class="no-highlight">38</i>&nbsp;        assertEquals(charA, charADup);</b>
+<i class="no-highlight">39</i>&nbsp;    }
+<i class="no-highlight">40</i>&nbsp;
+<i class="no-highlight">41</i>&nbsp;    @Test
+<i class="no-highlight">42</i>&nbsp;    void equalsACapitalA() {
+<b class="fc"><i class="no-highlight">43</i>&nbsp;        assertFalse(charA.equals(charACapital));</b>
+<i class="no-highlight">44</i>&nbsp;    }
+<i class="no-highlight">45</i>&nbsp;
+<i class="no-highlight">46</i>&nbsp;    @Test
+<i class="no-highlight">47</i>&nbsp;    void hashA() {
+<b class="fc"><i class="no-highlight">48</i>&nbsp;        assertEquals(charA.hashCode(), charADup.hashCode());</b>
+<i class="no-highlight">49</i>&nbsp;    }
+<i class="no-highlight">50</i>&nbsp;
+<i class="no-highlight">51</i>&nbsp;    // ! tests
+<i class="no-highlight">52</i>&nbsp;    @Test
+<i class="no-highlight">53</i>&nbsp;    void getValueExclam() {
+<b class="fc"><i class="no-highlight">54</i>&nbsp;        assertEquals(&#39;!&#39;, charExclam.getValue());</b>
+<i class="no-highlight">55</i>&nbsp;    }
+<i class="no-highlight">56</i>&nbsp;
+<i class="no-highlight">57</i>&nbsp;    @Test
+<i class="no-highlight">58</i>&nbsp;    void toStringSpaceLength() {
+<i class="no-highlight">59</i>&nbsp;        // 3 bc character length is one plus two single quotes
+<b class="fc"><i class="no-highlight">60</i>&nbsp;        assertTrue(charSpace.toString().length() == 3);</b>
+<i class="no-highlight">61</i>&nbsp;    }
+<i class="no-highlight">62</i>&nbsp;
+<i class="no-highlight">63</i>&nbsp;    @Test
+<i class="no-highlight">64</i>&nbsp;    void equalsPlus() {
+<b class="fc"><i class="no-highlight">65</i>&nbsp;        assertTrue(charPlus.equals(charPlusDup));</b>
+<i class="no-highlight">66</i>&nbsp;    }
+<i class="no-highlight">67</i>&nbsp;
+<i class="no-highlight">68</i>&nbsp;    @Test
+<i class="no-highlight">69</i>&nbsp;    void equalsPlusNumFalse() {
+<b class="fc"><i class="no-highlight">70</i>&nbsp;        assertFalse(charPlus.equals(char8));</b>
+<i class="no-highlight">71</i>&nbsp;    }
+<i class="no-highlight">72</i>&nbsp;
+<i class="no-highlight">73</i>&nbsp;    @Test
+<i class="no-highlight">74</i>&nbsp;    void equalHashCode() {
+<b class="fc"><i class="no-highlight">75</i>&nbsp;        assertEquals(charPlus.hashCode(), charPlus.hashCode());</b>
+<i class="no-highlight">76</i>&nbsp;    }
+<i class="no-highlight">77</i>&nbsp;
+<i class="no-highlight">78</i>&nbsp;    @Test
+<i class="no-highlight">79</i>&nbsp;    void equalHashCodeFalse() {
+<b class="fc"><i class="no-highlight">80</i>&nbsp;        assertFalse(charA.hashCode() == charExclam.hashCode());</b>
+<i class="no-highlight">81</i>&nbsp;    }
+<i class="no-highlight">82</i>&nbsp;
+<i class="no-highlight">83</i>&nbsp;
+<i class="no-highlight">84</i>&nbsp;
+<i class="no-highlight">85</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-09-19 18:56</div>
+</div>
+</body>
+</html>
